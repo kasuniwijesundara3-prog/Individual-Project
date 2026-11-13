@@ -1,0 +1,7 @@
+[
+  {"id":"n1","title":"Skincare Reminder","body":"Time for your morning routine!","time":"1h ago","icon":"🔔","read":false},
+  {"id":"n2","title":"New Products","body":"Check out our latest skincare collection!","time":"1d ago","icon":"⭐","read":false},
+  {"id":"n3","title":"Sunscreen Tip","body":"Reapply sunscreen every 2-3 hours when outdoors.","time":"1d ago","icon":"☀️","read":false},
+  {"id":"n4","title":"Special Offer","body":"Get 20% off this week!","time":"2d ago","icon":"🎁","read":true},
+  {"id":"n5","title":"Evening Routine","body":"Don't skip cleansing before bed.","time":"3d ago","icon":"🌙","read":true}
+]
