@@ -1,0 +1,7 @@
+[
+  {"city":"Colombo","temp":32,"humidity":78,"condition":"Hot & Humid","icon":"☀️","advice":["Use lightweight, gel based products","Don't forget sunscreen every 2-3 hours","Keep your skin hydrated"],"focus":["Sunscreen","Cleanser"]},
+  {"city":"Kandy","temp":26,"humidity":70,"condition":"Partly Cloudy","icon":"⛅","advice":["A light moisturizer is enough","Apply sunscreen even on cloudy days","Cleanse gently at night"],"focus":["Moisturizer","Sunscreen"]},
+  {"city":"Nuwara Eliya","temp":15,"humidity":85,"condition":"Cool & Misty","icon":"🌫️","advice":["Use a richer moisturizer","Protect your lips and cheeks from the cold","Add a hydrating serum"],"focus":["Moisturizer","Serum"]},
+  {"city":"Jaffna","temp":34,"humidity":65,"condition":"Hot & Sunny","icon":"🌞","advice":["Use SPF 50 and reapply","Choose oil free formulas","Drink plenty of water"],"focus":["Sunscreen","Cleanser"]},
+  {"city":"Galle","temp":30,"humidity":80,"condition":"Warm & Breezy","icon":"🌤️","advice":["Salt air can dry your skin, so moisturize","Rinse your face after sea water","Use a water resistant sunscreen"],"focus":["Sunscreen","Moisturizer"]}
+]
