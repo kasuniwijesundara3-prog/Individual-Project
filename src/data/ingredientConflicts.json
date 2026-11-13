@@ -1,0 +1,10 @@
+[
+  {"a":"Retinol","b":"Glycolic Acid","level":"high","message":"Retinol with an AHA can cause redness, peeling and irritation."},
+  {"a":"Retinol","b":"Salicylic Acid","level":"high","message":"Retinol with a BHA can over exfoliate and dry out the skin."},
+  {"a":"Retinol","b":"Vitamin C","level":"medium","message":"Both are active ingredients and may irritate together. Use Vitamin C in the morning and Retinol at night."},
+  {"a":"Retinol","b":"Benzoyl Peroxide","level":"high","message":"Benzoyl Peroxide can break down Retinol and cause dryness."},
+  {"a":"Vitamin C","b":"Glycolic Acid","level":"medium","message":"Two strong actives together can sting. Use them at different times of the day."},
+  {"a":"Vitamin C","b":"Benzoyl Peroxide","level":"medium","message":"Benzoyl Peroxide can oxidise Vitamin C and make it less effective."},
+  {"a":"Glycolic Acid","b":"Salicylic Acid","level":"medium","message":"Combining two exfoliating acids can damage the skin barrier."},
+  {"a":"Benzoyl Peroxide","b":"Salicylic Acid","level":"low","message":"Both dry the skin. Use one at a time if your skin is sensitive."}
+]
