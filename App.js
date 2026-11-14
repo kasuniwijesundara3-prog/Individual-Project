@@ -1,33 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
-import GradientBackground from './src/components/GradientBackground';
-import LotusLogo from './src/components/LotusLogo';
+import { ProductsProvider } from './src/context/ProductsContext';
+import { FavouritesProvider } from './src/context/FavouritesContext';
+import AppNavigator from './src/navigation/AppNavigator';
 import { colors } from './src/theme/colors';
 
 export default function App() {
   return (
-    <GradientBackground>
-      <StatusBar style="dark" />
-      <View style={styles.centerContainer}>
-        <LotusLogo size={100} subtitle="Your Smart Skincare Companion" />
-        <Text style={styles.setupText}>GlowUp Expo App Initialized ✨</Text>
-      </View>
-    </GradientBackground>
+    <SafeAreaProvider>
+      <ProductsProvider>
+        <FavouritesProvider>
+          <NavigationContainer>
+            <StatusBar style="dark" backgroundColor={colors.background} />
+            <AppNavigator />
+          </NavigationContainer>
+        </FavouritesProvider>
+      </ProductsProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  centerContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 24,
-  },
-  setupText: {
-    marginTop: 20,
-    fontSize: 14,
-    color: colors.textSecondary,
-    fontWeight: '500',
-  },
-});

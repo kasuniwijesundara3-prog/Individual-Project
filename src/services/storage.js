@@ -11,6 +11,7 @@ export const KEYS = {
   SKIN_TYPE: 'glowup_skin_type',
   PRODUCTS: 'glowup_products',
   NOTIFICATIONS: 'glowup_notifications',
+  ROUTINE: 'glowup_routine',
 };
 
 // Save any value (object, array, string) under a key
