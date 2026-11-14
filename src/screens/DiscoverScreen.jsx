@@ -11,7 +11,7 @@ export default function DiscoverScreen({ navigation, route }) {
   const { products } = useProducts();
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState(route.params?.category || 'All');
-  const shown = useMemo(() => products.filter((p) => (category === 'All' || p.category === category) && `${p.name} ${p.brand} ${p.ingredients.join(' ')}`.toLowerCase().includes(query.toLowerCase())), [products, category, query]);
+  const shown = useMemo(() => products.filter((p) => (category === 'All' || p.category === category) && `${p.name} ${p.brand} ${(Array.isArray(p.ingredients) ? p.ingredients : []).join(' ')}`.toLowerCase().includes(query.toLowerCase())), [products, category, query]);
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
       <View style={styles.header}><Text style={styles.kicker}>FIND YOUR FAVORITES</Text><Text style={styles.title}>Discover</Text><Text style={styles.subtitle}>Skincare picked for your everyday ritual.</Text></View>

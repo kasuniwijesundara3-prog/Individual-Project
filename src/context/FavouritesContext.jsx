@@ -10,7 +10,9 @@ export function FavouritesProvider({ children }) {
 
   // Load saved favourites when the app starts
   useEffect(() => {
-    loadData(KEYS.FAVOURITES, []).then(setFavouriteIds);
+    loadData(KEYS.FAVOURITES, []).then((saved) => {
+      setFavouriteIds(Array.isArray(saved) ? saved : []);
+    });
   }, []);
 
   // Add if missing, remove if already there

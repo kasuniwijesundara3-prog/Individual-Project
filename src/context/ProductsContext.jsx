@@ -17,7 +17,7 @@ export function ProductsProvider({ children }) {
   useEffect(() => {
     async function init() {
       const saved = await loadData(KEYS.PRODUCTS, null);
-      setProducts(saved || defaultProducts);
+      setProducts(Array.isArray(saved) ? saved : defaultProducts);
       setLoading(false);
     }
     init();
