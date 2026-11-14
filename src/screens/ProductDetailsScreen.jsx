@@ -9,12 +9,12 @@ const icons = { Cleanser: 'water-outline', Moisturizer: 'flower-outline', Serum:
 export default function ProductDetailsScreen({ route }) {
   const { getProductById } = useProducts();
   const { isFavourite, toggleFavourite } = useFavourites();
-  const product = getProductById(route.params.productId);
+  const product = getProductById(route.params?.productId);
   if (!product) return <View style={styles.missing}><Text style={styles.missingText}>This product is no longer available.</Text></View>;
   const saved = isFavourite(product.id);
   return (
     <ScrollView style={styles.safe} contentContainerStyle={styles.content}>
-      <View style={styles.art}><Ionicons name={icons[product.category] || 'sparkles-outline'} size={86} color={colors.primary} /><TouchableOpacity style={styles.heart} onPress={() => toggleFavourite(product.id)}><Ionicons name={saved ? 'heart' : 'heart-outline'} size={23} color={saved ? colors.primary : colors.textSecondary} /></TouchableOpacity></View>
+      <View style={styles.art}><Ionicons name={icons[product.category] || 'sparkles-outline'} size={86} color={colors.primary} /><TouchableOpacity style={styles.heart} onPress={() => toggleFavourite(product.id)} accessibilityRole="button" accessibilityLabel={saved ? 'Remove from saved' : 'Save product'}><Ionicons name={saved ? 'heart' : 'heart-outline'} size={23} color={saved ? colors.primary : colors.textSecondary} /></TouchableOpacity></View>
       <Text style={styles.brand}>{product.brand}  ·  {product.category}</Text><Text style={styles.title}>{product.name}</Text>
       <View style={styles.rating}><Ionicons name="star" size={16} color="#E5A52E" /><Text style={styles.ratingText}>{product.rating} ({product.reviews} reviews)</Text></View>
       <Text style={styles.price}>LKR {Number(product.price).toLocaleString()}</Text>

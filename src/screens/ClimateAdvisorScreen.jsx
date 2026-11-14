@@ -34,7 +34,7 @@ export default function ClimateAdvisorScreen({ navigation }) {
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <Text style={styles.kicker}>CARE THAT FITS YOUR DAY</Text>
         <Text style={styles.title}>Climate advisor</Text>
-        <Text style={styles.subtitle}>Local weather can change what your skin needs.</Text>
+        <Text style={styles.subtitle}>Explore skincare tips based on sample weather for Sri Lankan cities.</Text>
 
         <View style={styles.cityPicker}>
           <View style={styles.cityHeading}><Ionicons name="location-outline" size={18} color={colors.primary} /><Text style={styles.cityLabel}>Choose your city</Text></View>
@@ -48,15 +48,15 @@ export default function ClimateAdvisorScreen({ navigation }) {
           <View style={styles.weatherBottom}><Text style={styles.temperature}>{city.temp}°</Text><View style={styles.weatherDivider} /><View style={styles.humidity}><Ionicons name="water-outline" size={17} color="#5B8CA5" /><Text style={styles.humidityText}>{city.humidity}% humidity</Text></View></View>
         </View>
 
-        <View style={styles.sectionHeading}><View style={styles.sectionIcon}><Ionicons name="sparkles-outline" size={18} color={colors.primary} /></View><Text style={styles.sectionTitle}>Skin tips for today</Text></View>
+        <View style={styles.sectionHeading}><View style={styles.sectionIcon}><Ionicons name="sparkles-outline" size={18} color={colors.primary} /></View><Text style={styles.sectionTitle}>Skincare tips</Text></View>
         {(Array.isArray(city.advice) ? city.advice : []).map((tip, index) => <View key={`${city.city}-${index}`} style={styles.tipRow}><View style={styles.check}><Ionicons name="checkmark" size={14} color={colors.primary} /></View><Text style={styles.tipText}>{tip}</Text></View>)}
 
-        <View style={styles.sectionHeading}><View style={[styles.sectionIcon, styles.focusIcon]}><Ionicons name="leaf-outline" size={18} color="#548C70" /></View><View style={{ flex: 1 }}><Text style={styles.sectionTitle}>Good picks for this weather</Text><Text style={styles.sectionSubtitle}>Based on today’s climate in {city.city}</Text></View></View>
+        <View style={styles.sectionHeading}><View style={[styles.sectionIcon, styles.focusIcon]}><Ionicons name="leaf-outline" size={18} color="#548C70" /></View><View style={{ flex: 1 }}><Text style={styles.sectionTitle}>Good picks for this weather</Text><Text style={styles.sectionSubtitle}>Based on sample conditions for {city.city}</Text></View></View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.products}>
           {recommendations.map((product) => <ProductCard key={product.id} product={product} onPress={() => navigation.navigate('ProductDetails', { productId: product.id })} />)}
         </ScrollView>
         {recommendations.length === 0 && <Text style={styles.emptyText}>No matching products available yet.</Text>}
-        <TouchableOpacity style={styles.browseButton} onPress={() => navigation.navigate('Main', { screen: 'Discover' })}><Text style={styles.browseText}>Browse all skincare</Text><Ionicons name="arrow-forward" size={16} color={colors.primary} /></TouchableOpacity>
+        <TouchableOpacity style={styles.browseButton} onPress={() => navigation.navigate('Main', { screen: 'Discover', params: { category: 'All' } })}><Text style={styles.browseText}>Browse all skincare</Text><Ionicons name="arrow-forward" size={16} color={colors.primary} /></TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
