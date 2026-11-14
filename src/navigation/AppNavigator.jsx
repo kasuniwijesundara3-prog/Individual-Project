@@ -9,6 +9,7 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import RoutineScreen from '../screens/RoutineScreen';
 import ProductDetailsScreen from '../screens/ProductDetailsScreen';
 import SkinQuizScreen from '../screens/SkinQuizScreen';
+import ClimateAdvisorScreen from '../screens/ClimateAdvisorScreen';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -40,6 +41,7 @@ export default function AppNavigator() {
       <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
       <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} options={{ title: 'Product details', headerBackTitle: 'Back', headerTintColor: colors.primaryDark, headerStyle: { backgroundColor: colors.background }, headerShadowVisible: false }} />
       <Stack.Screen name="SkinQuiz" component={SkinQuizScreen} options={{ title: 'Skin quiz', headerBackTitle: 'Back', headerTintColor: colors.primaryDark, headerStyle: { backgroundColor: colors.background }, headerShadowVisible: false }} />
+      <Stack.Screen name="ClimateAdvisor" component={ClimateAdvisorScreen} options={{ title: 'Climate advisor', headerBackTitle: 'Back', headerTintColor: colors.primaryDark, headerStyle: { backgroundColor: colors.background }, headerShadowVisible: false }} />
     </Stack.Navigator>
   );
 }
