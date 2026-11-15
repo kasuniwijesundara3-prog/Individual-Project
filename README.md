@@ -18,6 +18,22 @@ Bring product discovery, skin guidance, and routine planning together in one fri
 - Admin dashboard and local product add, edit, and delete controls
 - Local persistence for profile session, products, notifications, favourites, and routines
 
+## Application screenshots
+
+These screenshots were captured from the running Expo web app using the local demo profile.
+
+| Splash and home | Product discovery | Product details |
+| --- | --- | --- |
+| ![GlowUp splash screen](docs/screenshots/01-splash.jpg) | ![Home dashboard](docs/screenshots/02-home.jpg) | ![Product details](docs/screenshots/04-product-details.jpg) |
+
+| Catalogue search and filter | Favourites | Product comparison |
+| --- | --- | --- |
+| ![Catalogue search and filter](docs/screenshots/03-catalogue-search-filter.jpg) | ![Favourites](docs/screenshots/05-favourites.jpg) | ![Product comparison](docs/screenshots/06-product-comparison.jpg) |
+
+| Skin quiz results | Personal routine | Admin product management |
+| --- | --- | --- |
+| ![Skin quiz results](docs/screenshots/07-skin-quiz-result.jpg) | ![My routine](docs/screenshots/08-routine.jpg) | ![Admin product management](docs/screenshots/09-admin-products.jpg) |
+
 ## Technologies
 
 - React Native 0.76 and React 18
@@ -42,6 +58,8 @@ Bring product discovery, skin guidance, and routine planning together in one fri
 │   ├── screens/                 # Authentication, user, and admin screens
 │   ├── services/                # Local storage helpers
 │   └── theme/                   # Colors and typography
+├── docs/
+│   └── screenshots/             # Screenshots captured from the running web app
 ├── package.json                 # Dependencies and Expo scripts
 └── README.md
 ```
