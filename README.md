@@ -34,6 +34,14 @@ These screenshots were captured from the running Expo web app using the local de
 | --- | --- | --- |
 | ![Skin quiz results](docs/screenshots/07-skin-quiz-result.jpg) | ![My routine](docs/screenshots/08-routine.jpg) | ![Admin product management](docs/screenshots/09-admin-products.jpg) |
 
+| Budget planner | Ingredient checker |
+| --- | --- |
+| ![Budget planner](docs/screenshots/10-budget-planner.jpg) | ![Ingredient checker showing a retinol and vitamin C warning](docs/screenshots/11-ingredient-checker.jpg) |
+
+| Notifications | Climate advisor |
+| --- | --- |
+| ![Notifications](docs/screenshots/12-notifications.jpg) | ![Climate advisor for Colombo](docs/screenshots/13-climate-advisor.jpg) |
+
 ## Technologies
 
 - React Native 0.76 and React 18
