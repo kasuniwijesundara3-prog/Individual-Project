@@ -18,12 +18,6 @@ Bring product discovery, skin guidance, and routine planning together in one fri
 - Admin dashboard and local product add, edit, and delete controls
 - Local persistence for profile session, products, notifications, favourites, and routines
 
-## Screenshots
-
-The following screen showcase illustrates the planned GlowUp app screens and visual direction:
-
-![GlowUp skincare app screen showcase](docs/glowup_design_showcase.png)
-
 ## Technologies
 
 - React Native 0.76 and React 18
@@ -40,7 +34,6 @@ The following screen showcase illustrates the planned GlowUp app screens and vis
 ├── App.js                       # App providers and navigation container
 ├── app.json                     # Expo application configuration
 ├── assets/                      # App image and icon assets
-├── docs/                        # UI showcase reference image
 ├── src/
 │   ├── components/              # Shared UI elements and product cards
 │   ├── context/                 # Product and favourites state
